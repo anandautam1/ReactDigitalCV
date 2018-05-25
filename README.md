@@ -3,7 +3,7 @@
 This project is a website protofolio showcasig my projects. 
 
 ## Quick start
-1. Clone this repo using `git clone https://git.saharalab.net/nandosckn/AzraVision-Revised/`
+1. Clone this repo using `git clone https://github.com/anandautam1/ReactDigitalCV`
 2. Move to the appropriate directory: `cd Azravision-Revised`.<br />
 3. Run `npm install` in order to install dependencies and clean the git repo.<br />
    *We auto-detect `yarn` for installing packages by default, if you wish to force `npm` usage do: `USE_YARN=false npm run setup`*<br />
