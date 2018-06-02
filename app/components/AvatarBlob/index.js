@@ -15,9 +15,10 @@ import Avatar from '@material-ui/core/Avatar';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-//import ProfPic from 'assets/AzraEyes.png';
+//import ProfPic from 'assets/s3530312.jpg';
 
 import { Grid, Row , Col } from 'react-bootstrap';
+import Paper from '@material-ui/core/Paper';
 
 class AvatarBlob extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -25,7 +26,7 @@ class AvatarBlob extends React.Component { // eslint-disable-line react/prefer-s
       <div>
 
         <Avatar
-          src="https://upload.wikimedia.org/wikipedia/commons/8/86/Cactus_Flower_%28Easy-Macro%29.jpeg"
+          src='https://drive.google.com/uc?id=1UawU3qY-4R-LfDglgsBSJfB_VjtM54MH'
           style={{ 
             width: 250,
             height: 250,
@@ -34,17 +35,6 @@ class AvatarBlob extends React.Component { // eslint-disable-line react/prefer-s
             marginTop: 10,
             marginBottom: 10,
         }}/>
-        
-        <div>
-          <Typography variant="title" color="inherit" 
-            style={{ 
-              textAlign: 'center',
-              marginTop: 10,
-              marginBottom: 10,
-          }}>
-            Ananda Utama
-          </Typography>
-        </div>
 
       </div>
     );

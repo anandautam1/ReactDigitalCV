@@ -41,7 +41,7 @@ class HomeBarMain extends React.Component { // eslint-disable-line react/prefer-
             <IconButton color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            <Button color="inherit">Ananda Utama</Button>
+            <Button color="inherit">ReactCV</Button>
           </Toolbar>
         </AppBar>        
       </div>
@@ -50,7 +50,7 @@ class HomeBarMain extends React.Component { // eslint-disable-line react/prefer-
 }
 
 HomeBarMain.propTypes = {
-  classes: PropTypes.object.isRequired,
+  //classes: PropTypes.object.isRequired,
 };
 
 export default HomeBarMain;

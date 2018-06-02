@@ -18,7 +18,48 @@ import ParticleBackground from 'components/ParticleBackground';
 import ProjectCard from 'components/ProjectCard';
 import AvatarBlob from 'components/AvatarBlob';
 
-import { Grid, Row , Col , Table , Button } from 'react-bootstrap';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
+import AquaChart from 'components/AquaChart';
+
+import TextCard from 'components/TextCard';
+
+import ChartTimeSeries from 'components/ChartTimeSeries';
+import TableSeries from 'components/TableSeries';
+
+import Typography from '@material-ui/core/Typography';
+
+import Wrapper from './Wrapper';
+
+const AcademicData = [
+  {alias:'1', name: 'Engineering Computing 1', result: 98 },
+  {alias:'2', name: 'Enterprise Engineering', result: 84 },
+  {alias:'3', name: 'Engineering Methods', result: 93 },
+  {alias:'4', name: 'Circuit Theory', result: 88 },
+  {alias:'5', name: 'Engineering Computing 2', result: 91 },
+  {alias:'6', name: 'Engineering Design 1', result: 73 },
+  {alias:'7', name: 'Electrical Engineering 1', result: 95 },
+  {alias:'8', name: 'Communication Engineering', result: 83},
+  {alias:'9', name: 'Electronics', result: 93},
+  {alias:'10', name: 'Introduction to Embedded Systems', result: 82},
+  {alias:'11', name: 'Engineering Design 2', result: 81},
+  {alias:'12', name: 'Network Fundamentals and Applications', result: 80},
+  {alias:'13', name: 'Signals and Systems', result: 89},
+  {alias:'14', name: 'Mathematics for ECE', result: 93},
+  {alias:'15', name: 'Embedded Design and Implementation', result: 88},
+  {alias:'16', name: 'Electronic Engineering 3', result: 86},
+  {alias:'17', name: 'Control Systems', result: 92},
+  {alias:'18', name: 'Engineering Design 3A', result: 83},
+  {alias:'19', name: 'Engineering Design 3B', result: 94},
+  {alias:'20', name: 'Network Engineering', result: 87},
+  {alias:'21', name: 'Mobile Computing', result: 80},
+  {alias:'22', name: 'Research Methods for Engineers', result: 83},
+  {alias:'23', name: 'Further Engineering Mathematics C', result: null},
+  {alias:'24', name: 'Physics 1', result: null},
+  {alias:'25', name: 'Math & Stats for Aero, Mech & Auto', result: null}
+];
+
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   // design 2 pcb 
@@ -28,31 +69,59 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   // deisng 3 part 2 moved to wifi controller 
 
   // deisng 4 home automation iot 
-
+  
   render() {
+    const index = 'result';
+    const acroWAM = "Weighted Average Mark";
+    const AcademicTitle = 'Academic Results';
+
+    let values = AcademicData.map(n => {
+      return (n.result);
+    });
+
+    let sum = values.reduce((previous, current) => current += previous);
+    let calcWAMavg = sum / (values.length - 3) ;
+
     return (
       <div>
-        <HomeBarMain/>
-          {/* <ParticleBackground /> */}
-          <div style={{
-                zIndex: 2,
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}>
-              <Grid>
-                <Row>
-                  <Col xs={6} md={6} lg={6} >
-                    <AvatarBlob />
-                  </Col>
-                  <Col md={6} lg={6}>
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                  </Col>
-                </Row>
-              </Grid>
-          </div>
+
+      <HomeBarMain/>
+
+      <Grid container spacing={24}>
+          
+          <Grid item xs={12} sm={12} md={3} lg={3} >
+            <AvatarBlob />
+          </Grid>
+
+          <Grid item xs={12} sm={12} md={9} lg={9} >
+            <ProjectCard />
+            <TextCard />
+          </Grid>
+
+          <Grid item sm={12} md={12} lg={12}>
+            <Paper>
+                <Typography style={{textAlign:'center', padding:'10px'}}> {AcademicTitle}</Typography>
+            </Paper>
+          </Grid>
+          
+          <Grid item sm={12} md={6} lg={6}>
+            <ChartTimeSeries 
+              data={AcademicData} 
+              dataKeyPrimary={index}
+              aspectRatio={16.0/9}/>
+          </Grid>
+
+          <Grid item sm={12} md={6} lg={6}>
+            <AquaChart value={calcWAMavg} label={acroWAM} colour={'#3f51b5'} />
+          </Grid>
+          
+          <Grid item sm={12} md={6} lg={12}>
+            <TableSeries 
+              data={AcademicData}/> 
+          </Grid>
+
+      </Grid>
+
       </div>
     );
   }

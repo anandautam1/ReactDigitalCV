@@ -1,0 +1,22 @@
+Semester 2 2017	EEET2109	Control Systems	HD	12	View
+Semester 2 2017	EEET2259	Engineering Design 3B	HD	12	View
+Semester 2 2017	EEET2422	Mobile Computing	HD	12	View
+Semester 2 2017	EEET2449	Research Methods for Engineer	HD	12	View
+Semester 1 2017	EEET2096	Embedded System Design & Impl	HD	12	View
+Semester 1 2017	EEET2098	Electronic Engineering 3	HD	12	View
+Semester 1 2017	EEET2258	Engineering Design 3A	HD	12	View
+Semester 1 2017	EEET2290	Network Engineering	HD	12	View
+Semester 2 2016	EEET2254	Communication Engineering	HD	12	View
+Semester 2 2016	EEET2255	Electronics	HD	12	View
+Semester 2 2016	EEET2256	Intro to Embedded Systems	HD	12	View
+Semester 2 2016	EEET2257	Engineering Design 2	HD	12	View
+Semester 1 2016	EEET1316	Electrical Engineering 1	HD	12	View
+Semester 1 2016	MATH2161	Mathematics for ECE	HD	12	View
+Semester 1 2016	EEET2368	Network Fundamentals & Apps	HD	12	View
+Semester 1 2016	EEET2369	Signals and Systems	HD	12	View
+Semester 2 2015	EEET2248	Engineering Methods	HD	12	View
+Semester 2 2015	EEET2249	Circuit Theory	HD	12	View
+Semester 2 2015	EEET2250	Engineering Computing 2	HD	12	View
+Semester 2 2015	EEET2251	Engineering Design 1	DI	12	View
+Semester 1 2015	EEET2246	Engineering Computing 1	HD	12	View
+Semester 1 2015	EEET2247	Enterprise Engineering	HD	12	View

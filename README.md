@@ -1,6 +1,6 @@
 # ReactDigitalCV
 
-This project is a website protofolio showcasig my projects. 
+This project is a website protofolio showcasing my projects. 
 
 ## Quick start
 1. Clone this repo using `git clone https://github.com/anandautam1/ReactDigitalCV`
@@ -9,3 +9,8 @@ This project is a website protofolio showcasig my projects.
    *We auto-detect `yarn` for installing packages by default, if you wish to force `npm` usage do: `USE_YARN=false npm run setup`*<br />
    *At this point you can run `npm start` to see the example app at `http://localhost:3000`.*
 4. Run `npm start` to delete the example app.
+
+## Dependencies
+Recharts 
+React Bootstrap 
+Material-ui bar
