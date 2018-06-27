@@ -25,12 +25,22 @@ import AquaChart from 'components/AquaChart';
 
 import TextCard from 'components/TextCard';
 
+import ReactCvLogo from 'components/ReactCvLogo'
 import ChartTimeSeries from 'components/ChartTimeSeries';
 import TableSeries from 'components/TableSeries';
 
 import Typography from '@material-ui/core/Typography';
 
 import Wrapper from './Wrapper';
+
+import ProjectStepper from 'components/ProjectStepper';
+
+const PersonalData = [
+  { name: 'Ananda Utama', initial:'AU', residence: 'Melbourne, Australia', university:'RMIT',
+    email: 'ananda.d.a.utama@gmail.com',
+    careerObjective: 'Energetic Fourth Year Electrical and Electronic University student with previous embedded system development, electronics Internet of Things, web development and customer service experience. Currently looking for an experience in the engineering industry. Proven to be responsible and dedicated person with excellent communication, management skills and the ability to learn quickly. To work with a team in a challenging and competitive environment and to utilize and improve my technical skills and having the capabilities to put them to use for the development of the organization. Aiming to bring all of these experiences and qualities to your organization.'
+  }
+];
 
 const AcademicData = [
   {alias:'1', name: 'Engineering Computing 1', result: 98 },
@@ -73,6 +83,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   render() {
     const index = 'result';
     const acroWAM = "Weighted Average Mark";
+    const ProjectTitle = 'Projects Showcase';
     const AcademicTitle = 'Academic Results';
 
     let values = AcademicData.map(n => {
@@ -83,20 +94,47 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     let calcWAMavg = sum / (values.length - 3) ;
 
     return (
-      <div>
-
+      <div> 
       <HomeBarMain/>
-
-      <Grid container spacing={24}>
+      
+      <Grid container spacing={24} style={{paddingRight:44, paddingLeft:44, paddingTop: 30}}>
           
+          
+
           <Grid item xs={12} sm={12} md={3} lg={3} >
             <AvatarBlob />
+            
           </Grid>
 
           <Grid item xs={12} sm={12} md={9} lg={9} >
             <ProjectCard />
             <TextCard />
           </Grid>
+
+          <Grid item sm={12} md={12} lg={12}>
+            <Paper>
+                <Typography style={{textAlign:'center', padding:'10px'}}> {ProjectTitle}</Typography>
+            </Paper>
+          </Grid>
+
+          <Grid item sm={12} md={6} lg={6}>
+            <ProjectStepper theme={{direction:'custom'}}/>
+
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </Grid>
+
+           <Grid item sm={12} md={6} lg={6}>
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </Grid>
+
 
           <Grid item sm={12} md={12} lg={12}>
             <Paper>

@@ -3,7 +3,9 @@ import styled from 'styled-components';
 // the bottom contains the css which changes the background to the png asset
 // the height of the asset will change depending on the screen size
 export default styled.div`
-text-align: center;
+
+padding: 32px;
+margin: auto;
 z-index: 9;
 
 @media screen and (min-width: 992px)

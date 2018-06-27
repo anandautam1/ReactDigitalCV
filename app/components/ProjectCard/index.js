@@ -67,7 +67,7 @@ class ProjectCard extends React.Component { // eslint-disable-line react/prefer-
           <CardHeader
             avatar={
               <Avatar aria-label="Recipe" >
-                R
+                AU
               </Avatar>
             }
             action={

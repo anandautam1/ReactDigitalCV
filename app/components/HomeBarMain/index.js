@@ -19,6 +19,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import ReactCvLogo from 'components/ReactCvLogo';
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -39,7 +41,7 @@ class HomeBarMain extends React.Component { // eslint-disable-line react/prefer-
         <AppBar position="static">
           <Toolbar>
             <IconButton color="inherit" aria-label="Menu">
-              <MenuIcon />
+              <ReactCvLogo logoWidth={70} logoHeight={50}/>
             </IconButton>
             <Button color="inherit">ReactCV</Button>
           </Toolbar>
